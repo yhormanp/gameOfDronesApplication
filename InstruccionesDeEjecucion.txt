@@ -1,0 +1,19 @@
+extraer los contenidos de las carpetas DroneServices, myapp en carpetas del mismo nombre. 
+
+
+pasos para correr el aplicativo del servicio en .net
+1. abrir la carpeta DroneService con visual studio 
+2. Click derecho sobre la solucion del proyecto conel nombre "Solution DroneService"
+3. ir a la opcion "restore nuget packages"
+4. ir al archivo web.config y en la linea 12, actualizar el datasource de gestor de base de datos, donde se creara la nueva base de datos "gameofdrones".
+5. ir al menu "Tools", "Nuget Package Manager", "Package Manager Console". Alli debe digitar el siguiente comando "update-Database". Esto creará la base de datos
+6. cuando se hayan actualizado los paquetes y la base de datos se haya creado, dar click al icono de play para correr el aplictivo o F5
+7. tomar en cuenta la ruta en la que abre el proyecto DroneService. Para mi ejemplo , la ruta es http://localhost:51181
+
+
+pasos para correr el aplicativo en angular
+1.abrir la carpeta myApp con el IDE de su preferencia
+2. digite el comando "npm install" en una terminal para descargar los modulos necesarios 
+3. ir al archivo src/app/components/droneservice.service.ts y la variable de nombre baseApiUrl, debe actualizarse con la ruta base tomada  en el punto 7 de la ejecución del droneService
+4. digite el comando "ng serve" para correr el aplicativo y poder visualizarlo en el puerto http://localhost:4200
+
